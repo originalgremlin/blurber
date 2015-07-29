@@ -1,0 +1,24 @@
+{
+  "name": "blurber",
+  "version": "1.0.0",
+  "description": "Extract summary content from urls for display in Air Computing's messaging client.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:originalgremlin/blurber.git"
+  },
+  "scripts": {
+    "start": "forever start -p var -l log/forever.out -o var/log/server.out -e var/log/server.err -a -w --minUptime 1000 --spinSleepTime 1000 server.js",
+    "stop": "forever stop server.js",
+    "restart": "forever restart server.js"
+  },
+  "dependencies": {
+    "hiredis": "^0.4.0",
+    "md5": "^2.0.0",
+    "open-graph": "^0.1.5",
+    "redis": "^0.12.1",
+    "restify": "^3.0.3"
+  },
+  "devDependencies": {
+    "forever": "^0.15.0"
+  }
+}
